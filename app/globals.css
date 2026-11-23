@@ -1,0 +1,57 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f2e9;
+  --card: #fffcf6;
+  --ink: #211c2c;
+  --muted: #625a68;
+  --line: #ded4cc;
+  --plum: #462c58;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, 'Malgun Gothic', sans-serif; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); padding: .65rem .95rem; }
+button:disabled { cursor: default; background: #ede8e3; color: #655f67; }
+button:not(:disabled):hover { border-color: var(--plum); }
+:focus-visible { outline: 3px solid #9763a7; outline-offset: 3px; }
+.wrap { width: min(1080px, calc(100% - 2rem)); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--line); }
+.header-inner, nav { display: flex; align-items: center; gap: 1.4rem; }
+.header-inner { min-height: 64px; justify-content: space-between; }
+.brand, .hero-label { font-family: Georgia, serif; letter-spacing: .15em; font-weight: 700; }
+nav { font-size: .9rem; }
+.hero { min-height: 255px; margin-top: 1.75rem; padding: clamp(1.5rem, 5vw, 4rem); border-radius: 24px; background: radial-gradient(ellipse at 82% 20%, #513861, #251a34 70%); color: #fff6e6; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.hero-label { color: #f0cf96; margin-top: 0; }
+h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1.1; margin: 0; letter-spacing: -.06em; }
+.hero p:last-child { margin-bottom: 0; }
+.hero-moon { color: #f4d399; font: clamp(3.5rem, 14vw, 9rem)/1 Georgia, serif; }
+.notice { padding: .9rem 1rem; border-radius: 10px; background: #efe3cf; }
+.notice strong { margin-right: .6rem; color: #643f28; }
+.menu { margin-top: 2.5rem; }
+h2 { margin: 0 0 1rem; font-size: 1.8rem; }
+h3 { margin: 1.35rem 0 .7rem; }
+.filters { display: flex; justify-content: space-between; gap: .9rem; flex-wrap: wrap; align-items: end; }
+.tabs, .actions { display: flex; gap: .45rem; flex-wrap: wrap; }
+.tabs button[aria-pressed="true"], .order:not(:disabled) { background: var(--plum); color: white; border-color: var(--plum); }
+.search { display: grid; gap: .3rem; font-size: .85rem; color: var(--muted); }
+.search input { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: .65rem .85rem; background: var(--card); color: var(--ink); font-size: 1rem; }
+.result, .description, .footer { color: var(--muted); }
+.order-feedback p, .empty { padding: .8rem 1rem; background: #ede2f0; border-radius: 10px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 215px), 1fr)); gap: .85rem; }
+.card { background: var(--card); padding: 1.2rem; border: 1px solid var(--line); border-radius: 16px; display: flex; flex-direction: column; }
+.card-top { display: flex; justify-content: space-between; align-items: start; }
+.menu-icon { display: grid; place-items: center; background: #f1e7dc; width: 3rem; height: 3rem; border-radius: 12px; font-size: 1.4rem; }
+.badge { color: #6c3e18; background: #f9e3bd; padding: .25rem .45rem; border-radius: 6px; font-size: .72rem; font-weight: 800; }
+.card h4 { margin: .85rem 0 .25rem; font-size: 1.1rem; }
+.description { margin: 0 0 .7rem; font-size: .9rem; flex: 1; }
+.price { font-weight: 750; margin: .15rem 0 .75rem; }
+.stamp { margin: 2.5rem 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: clamp(1rem, 4vw, 2rem); }
+.stamp-slots { display: grid; grid-template-columns: repeat(10, minmax(0, 2.6rem)); gap: .45rem; margin-bottom: 1rem; }
+.stamp-slots span { display: grid; place-items: center; aspect-ratio: 1; border: 1px dashed #a896aa; border-radius: 50%; color: var(--muted); font-size: .9rem; }
+.stamp-slots .filled { background: var(--plum); color: white; border-style: solid; font-size: 1.2rem; }
+.footer { padding: 1.25rem 0; border-top: 1px solid var(--line); font-size: .85rem; }
+@media (max-width: 520px) {
+  .stamp-slots { grid-template-columns: repeat(5, 2.4rem); }
+  .search { width: 100%; }
+}
