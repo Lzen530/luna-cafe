@@ -1,6 +1,6 @@
 # 루나 카페
 
-React 입문·12주차 카페 실습을 합친 Next.js App Router 프로젝트입니다.
+프론트엔드 강의 카페 실습 Next.js App Router 프로젝트입니다.
 
 ## 실행
 
